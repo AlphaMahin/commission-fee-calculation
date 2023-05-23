@@ -1,0 +1,30 @@
+{
+    "name": "calculation/commission-fee-calculation",
+    "description": "",
+    "keywords": [],
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Calculation\\CommissionTask\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Calculation\\CommissionTask\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+        "ext-bcmath": "*"
+    },
+    "config": {
+        "sort-packages": true,
+        "bin-dir": "bin"
+    },
+    "scripts": {
+        "phpunit": "phpunit",
+        "fix-cs": "php-cs-fixer fix",
+        "test-cs": "php-cs-fixer fix --dry-run -v",
+        "test": ["@phpunit", "@test-cs"]
+    }
+}
